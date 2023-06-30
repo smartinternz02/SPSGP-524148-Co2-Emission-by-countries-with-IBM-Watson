@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CO2 Emission Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>CO2 Emission Prediction</h1>
+        <form action="{{ url_for('predict') }}" method="post">
+            <div class="form-group">
+                <label for="country_name">Country Name:</label>
+                <input type="text" id="country_name" name="CountryName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="country_code">Country Code:</label>
+                <input type="text" id="country_code" name="CountryCode" required>
+            </div>
+
+            <div class="form-group">
+                <label for="indicator_name">Indicator Name:</label>
+                <input type="text" id="indicator_name" name="IndicatorName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="year">Year:</label>
+                <input type="number" id="year" name="Year" required>
+            </div>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
